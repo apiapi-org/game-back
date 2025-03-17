@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: game-back
+
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/game}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root_password}
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 50
+        order_inserts: true
+        order_updates: true
+server:
+  port: 8080
