@@ -1,10 +1,13 @@
 package apiapi.gameback.domain;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 @Entity
-@Data
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Document {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
